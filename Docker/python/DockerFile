@@ -1,0 +1,17 @@
+# Utilise une image de base avec Python 3.10 (ou autre version souhaitée)
+FROM python:3.13.0-bookworm
+
+# Définit le répertoire de travail
+WORKDIR /app
+RUN ls -l 
+
+# Copie les fichiers de votre application dans le conteneur
+# COPY ./app /app
+
+
+# Installe les dépendances à partir d'un requirements.txt (si nécessaire)
+# COPY requirements.txt .
+# RUN pip install -r requirements.txt
+
+# Commande pour exécuter le script Python principal
+CMD ["python", "main.py"]
